@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-white" onload="firstView('apple')">
+    <header>
+        <h1 class="text-4xl text-center my-10 font-bold bg-violet-600 text-white rounded-md py-5">Found your phone</h1>
+        <div class=" flex items-center gap-4 justify-center">
+            <input onkeyup="foundPhoneByEnter(event, value)" type="text" placeholder="Type your phone name"
+                class="input input-bordered input-primary w-full max-w-xs" />
+            <button onclick="foundPhone(event)" class="btn btn-active btn-primary">Search</button>
+        </div>
+    </header>
+
+    <!-- card section  -->
+    <section>
+        <!-- spinier -->
+        <div id="loading" class="mx-auto mt-36 w-fit hidden"><button class=" mx-auto btn btn-square loading "></button></div>
+        <!-- modal  -->
+
+        <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+        <div class="modal">
+            <div id="modal-box" class="modal-box relative h-screen">
+            </div>
+        </div>
+
+        <!-- card-contener -->
+        <div id="card-contener" class="px-10 mt-8 grid grid-cols-3 gap-4">
+        </div>
+
+        <!-- show more button  -->
+        <div id="show-more-btn" class="hidden">
+            <button id="" class="btn btn-success my-6 block mx-auto">Show more</button>
+        </div>
+
+    </section>
+
+
+
+
+    <script src="./hunter.js"></script>
+</body>
+
+</html>
